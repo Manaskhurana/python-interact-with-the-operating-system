@@ -1,0 +1,158 @@
+root@user:/home/manas/Documents/python-work# python3
+Python 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> with open("spider.txt,"w") as file:
+  File "<stdin>", line 1
+    with open("spider.txt,"w") as file:
+                            ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> with open("spider.txt","w") as file:
+...      file.write("noob coder is back again!")
+... 
+25
+>>> exit()
+root@user:/home/manas/Documents/python-work# touch noob.txt
+root@user:/home/manas/Documents/python-work# python3
+Python 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import os
+>>> os.remove("noob.txt")
+>>> 
+>>> os.path.exists("spider.txt")
+True
+>>> os.path.exists("noob.txt")
+False
+>>> os.pth.getsize("spider.txt")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'os' has no attribute 'pth'. Did you mean: 'path'?
+>>> os.path.getsize("spider.txt")
+25
+>>> os.path.getmtime("spider.txt")
+1735689902.4986885
+>>> print(os.getcwd())
+/home/manas/Documents/python-work
+>>> os.mkdir("new_dir")
+>>> os.mkdir("new-python")
+>>> os.chdir("new-python")
+>>> os.getcwd()
+'/home/manas/Documents/python-work/new-python'
+>>> import os 
+>>> od.listdir()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'od' is not defined. Did you mean: 'os'?
+>>> import os
+>>> os.listdir()
+[]
+>>> os.listdir("new-python")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'new-python'
+>>> os.listdir("spider.txt")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'spider.txt'
+>>> os.listdir("python-work")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'python-work'
+>>> exit()
+root@user:/home/manas/Documents/python-work# touch csv_file.txt
+root@user:/home/manas/Documents/python-work# cat csv_file.txt
+noob,009,sys
+hacker.007,sys admin
+tom,667,web dev
+jeery,4456,programmer
+root@user:/home/manas/Documents/python-work# import csv
+Command 'import' not found, but can be installed with:
+apt install graphicsmagick-imagemagick-compat  # version 1.4+really1.3.42-1, or
+apt install imagemagick-6.q16                  # version 8:6.9.11.60+dfsg-1.6ubuntu1
+apt install imagemagick-6.q16hdri              # version 8:6.9.11.60+dfsg-1.6ubuntu1
+root@user:/home/manas/Documents/python-work# python3
+Python 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import csv
+>>> f = open("csv_file.txt")
+>>> csv_f = csv.reader(f)
+>>> for row in csv_f:
+...   name,id,role = row
+...   print("name: {},id: {},role: {}".format(name,id,role))
+... 
+name: noob,id: 009,role: sys
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: not enough values to unpack (expected 3, got 2)
+>>> 
+>>> 
+>>> 
+>>> import csv
+>>> f = open("csv_file.txt")
+>>> csv_f = csv.reader(f)
+>>> for row in csv_f:
+...     name,ph,role = row
+...     print("name: {}, ph: {}, role:{}".format(name,ph,role))
+...    
+... 
+name: noob, ph: 009, role:sys
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: not enough values to unpack (expected 3, got 2)
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> import csv
+>>> f = open("csv_file.txt")
+>>> csv_f = csv.reader(f)
+>>> for row in csv_f:
+...     name,id,role = row
+...     print("name: {}, id: {},role: {}".format("name,id,role"))
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+IndexError: Replacement index 1 out of range for positional args tuple
+>>> 
+KeyboardInterrupt
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> hosts = [["workstation.local","192.168.25.46"],["webserver.cloud","10.2.5.6"]]
+>>> with open('hosts.csv','w') as hosts_csv:
+...  writer = csv.writer(hosts_csv)
+...  writer.writerows(hosts)
+... 
+>>> 
+>>> exit()]
+  File "<stdin>", line 1
+    exit()]
+          ^
+SyntaxError: unmatched ']'
+>>> exit()
+root@user:/home/manas/Documents/python-work# cat hosts.csv
+workstation.local,192.168.25.46
+webserver.cloud,10.2.5.6
+root@user:/home/manas/Documents/python-work# cat software.csv
+cat: software.csv: No such file or directory
+root@user:/home/manas/Documents/python-work# touch software.csv
+root@user:/home/manas/Documents/python-work# python3
+Python 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> with open("software.csv") as software:
+...   reader = csv.DictReader(software)
+...   for row in reader:
+...     print(("{} has {} users").format(row["name"], row["users"]))
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'csv' is not defined. Did you forget to import 'csv'?
+>>> 
+

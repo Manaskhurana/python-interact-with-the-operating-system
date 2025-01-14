@@ -1,0 +1,71 @@
+pwd
+#to check dir
+
+cp ../<filename> .
+#to copy file from previous dir
+
+ls
+#to check file in dir
+
+touch <filename>
+#to make file 
+
+ls -l
+# to check file when created and modify
+
+ls -la
+#to check hidden dir
+
+mv myfile.txt emptyfile.txt
+# to move files
+
+cp <filename> <filename>
+#to copy files to another file
+
+cd ..
+#to enter in previous dir
+
+rmdir mynewdir/
+#delete dir and only works when dir is empty
+
+./<filename>  < <filename>
+# to run file and copy file
+
+./<filename> >> <filename>
+# to copy the content of the file in new file 
+
+./<filename> < <filename> 2>  <filename>
+# to run the file and catch the error in new file
+
+echo "These are the contents of the file" > <filename>
+#to make the file and add the content
+
+ls -l | less
+# to check files in dir and when the file is modify 
+
+cat <filename> | tr ' ' '\n' | sort | uniq -c | sort -nr | head
+# help to sort the content in order
+
+fg
+# to run the program once again.
+
+ps ax | grep ping
+# to check in which port its runing
+
+kill <port>
+# to terminated the ping program.
+
+echo *.py
+# to check py file in dir
+
+echo c*
+#to check files start with letter c
+
+echo *
+# to check all files in dic
+
+echo ?????.py
+# to show files with 5 letter
+
+if test -n "$PATH"; then echo "Your path is not empty";fi
+# to check path is not empty
